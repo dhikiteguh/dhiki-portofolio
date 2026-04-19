@@ -8,38 +8,15 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#ffffff;--bg2:#f7f6f3;--text:#1a1a1a;--muted:#888783;--border:rgba(0,0,0,0.09);--tag-bg:#f0efe9;--tag-text:#666}
 body.dark{--bg:#111110;--bg2:#1c1c1a;--text:#eeede8;--muted:#5a5956;--border:rgba(255,255,255,0.09);--tag-bg:#272725;--tag-text:#999}
-body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;min-height:100vh;transition:background .25s,color .25s}
+body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;min-height:100vh;transition:background .25s,color .25s}
 
-/* ── PAGES ── */
 .page{display:none;max-width:680px;margin:0 auto;padding:2.5rem 1.5rem 9rem;animation:fadeIn .22s ease}
 .page.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── FLOATING BOTTOM NAV ── */
-nav{
-  position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);
-  z-index:200;
-  display:flex;align-items:center;justify-content:center;gap:.2rem;
-  padding:.5rem .65rem;
-  border-radius:22px;
-  background:rgba(255,255,255,0.6);
-  border:0.5px solid rgba(255,255,255,0.6);
-  backdrop-filter:blur(30px) saturate(200%);
-  -webkit-backdrop-filter:blur(30px) saturate(200%);
-  box-shadow:0 8px 40px rgba(0,0,0,0.12),0 1px 0 rgba(255,255,255,0.9) inset;
-}
-body.dark nav{
-  background:rgba(22,22,20,0.68);
-  border-color:rgba(255,255,255,0.08);
-  box-shadow:0 8px 40px rgba(0,0,0,0.55),0 1px 0 rgba(255,255,255,0.04) inset;
-}
-.nav-item{
-  display:flex;flex-direction:column;align-items:center;gap:3px;
-  padding:7px 14px;border-radius:14px;cursor:pointer;
-  border:none;background:transparent;font-family:inherit;
-  transition:background .15s;
-  text-decoration:none;
-}
+nav{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);z-index:200;display:flex;align-items:center;justify-content:center;gap:.2rem;padding:.5rem .65rem;border-radius:22px;background:rgba(255,255,255,0.6);border:0.5px solid rgba(255,255,255,0.6);backdrop-filter:blur(30px) saturate(200%);-webkit-backdrop-filter:blur(30px) saturate(200%);box-shadow:0 8px 40px rgba(0,0,0,0.12),0 1px 0 rgba(255,255,255,0.9) inset}
+body.dark nav{background:rgba(22,22,20,0.68);border-color:rgba(255,255,255,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.55),0 1px 0 rgba(255,255,255,0.04) inset}
+.nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 14px;border-radius:14px;cursor:pointer;border:none;background:transparent;font-family:inherit;transition:background .15s}
 .nav-item:hover{background:rgba(0,0,0,0.05)}
 body.dark .nav-item:hover{background:rgba(255,255,255,0.07)}
 .nav-item.active-link{background:rgba(0,0,0,0.07)}
@@ -50,44 +27,26 @@ body.dark .nav-item.active-link{background:rgba(255,255,255,0.1)}
 .nav-label{font-size:10px;color:var(--muted);letter-spacing:.01em;transition:color .15s}
 .nav-item.active-link .nav-label{color:var(--text);font-weight:500}
 .nav-divider{width:0.5px;height:28px;background:var(--border);margin:0 4px}
-.theme-toggle{
-  padding:7px 10px;border-radius:14px;border:none;background:transparent;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  transition:background .15s;
-}
+.theme-toggle{padding:7px 10px;border-radius:14px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
 .theme-toggle:hover{background:rgba(0,0,0,0.05)}
 body.dark .theme-toggle:hover{background:rgba(255,255,255,0.07)}
 .theme-toggle svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .icon-sun{display:block}.icon-moon{display:none}
 body.dark .icon-sun{display:none}body.dark .icon-moon{display:block}
 
-/* ── TYPOGRAPHY ── */
 hr{border:none;border-top:0.5px solid var(--border);margin:2.4rem 0}
 .slabel{font-size:13px;font-weight:500;color:var(--text);margin-bottom:.75rem}
 .ssub{font-size:13px;color:var(--muted);margin-bottom:1.5rem;line-height:1.8;max-width:500px}
 
-/* ── HOME ── */
 .hero h1{font-size:clamp(1.6rem,5vw,2.1rem);font-weight:600;letter-spacing:-.03em;line-height:1.2;margin-bottom:.3rem}
 .hero .role{font-size:13px;color:var(--muted);margin-bottom:1.3rem}
 .hero p{font-size:14px;color:var(--muted);max-width:480px;line-height:1.9}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:1.8rem}
 .tag{background:var(--tag-bg);color:var(--tag-text);font-size:11.5px;padding:4px 12px;border-radius:20px}
 .avatar-wrap{margin-bottom:1.6rem}
-.avatar-ring{
-  width:96px;height:96px;border-radius:50%;
-  padding:2.5px;
-  background:var(--border);
-  display:inline-block;
-}
-.avatar-ring img{
-  width:100%;height:100%;
-  border-radius:50%;
-  object-fit:cover;object-position:center center;
-  display:block;
-  border:2.5px solid var(--bg);
-}
+.avatar-ring{width:96px;height:96px;border-radius:50%;padding:2.5px;background:var(--border);display:inline-block}
+.avatar-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center center;display:block;border:2.5px solid var(--bg)}
 
-/* ── ARCHIVE (collab + process) ── */
 .collab-row{display:flex;gap:1rem;align-items:stretch;flex-wrap:wrap;margin-top:.3rem}
 .collab-item{display:flex;flex-direction:column;align-items:center;gap:7px}
 .logo-box{border:0.5px solid var(--border);border-radius:14px;padding:16px 22px;display:flex;align-items:center;justify-content:center;min-width:130px;min-height:72px}
@@ -100,23 +59,42 @@ hr{border:none;border-top:0.5px solid var(--border);margin:2.4rem 0}
 .step h3{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px}
 .step p{font-size:12.5px;color:var(--muted);line-height:1.75}
 
-/* ── WORK ── */
-.projects{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.pcard{background:var(--bg2);border-radius:12px;overflow:hidden;border:0.5px solid var(--border);transition:opacity .2s;cursor:pointer;display:block;text-decoration:none;color:inherit}
-.pcard:hover{opacity:.7}
-.pthumb{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:var(--tag-bg);overflow:hidden;font-size:1.6rem}
+/* WORK CARDS */
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pcard{background:var(--bg2);border-radius:14px;overflow:hidden;border:0.5px solid var(--border);transition:transform .2s,box-shadow .2s;cursor:pointer;display:flex;flex-direction:column}
+.pcard:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.pthumb{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:var(--tag-bg);overflow:hidden;font-size:1.6rem;flex-shrink:0}
 .pthumb img{width:100%;height:100%;object-fit:cover}
-.pinfo{padding:11px 12px}
+.pinfo{padding:11px 12px;flex:1;display:flex;flex-direction:column}
 .pplatform{font-size:10px;color:var(--muted);margin-bottom:3px;letter-spacing:.02em}
-.pinfo h3{font-size:12px;font-weight:500;color:var(--text);margin-bottom:3px}
-.pinfo p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:7px}
-.pstats{display:flex;gap:5px;flex-wrap:wrap}
+.pinfo h3{font-size:12.5px;font-weight:500;color:var(--text);margin-bottom:4px}
+.pinfo p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:8px;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pstats{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
 .pstats span{font-size:10px;background:var(--tag-bg);color:var(--tag-text);padding:2px 7px;border-radius:20px}
+.btn-detail{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;color:var(--text);background:var(--bg);border:0.5px solid var(--border);padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;transition:background .15s,color .15s;text-decoration:none;align-self:flex-start}
+.btn-detail:hover{background:var(--text);color:var(--bg)}
+.btn-detail svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* ── CONTACT ── */
-.contact-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1rem}
+/* DETAIL PAGE */
+.detail-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer;background:none;border:none;font-family:inherit;margin-bottom:1.5rem;padding:0;transition:color .15s}
+.detail-back:hover{color:var(--text)}
+.detail-back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.detail-platform{font-size:12px;color:var(--muted);margin-bottom:.4rem;letter-spacing:.02em}
+.detail-title{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.4rem;line-height:1.3}
+.detail-stats{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:1.5rem}
+.detail-stats span{font-size:12px;background:var(--tag-bg);color:var(--tag-text);padding:4px 12px;border-radius:20px}
+.detail-photos{display:grid;gap:8px;margin-bottom:1.5rem}
+.detail-photos.one{grid-template-columns:1fr}
+.detail-photos.two{grid-template-columns:1fr 1fr}
+.detail-photos.three{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
+.detail-photos.three img:first-child{grid-column:1/-1}
+.detail-photos img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:16/9;background:var(--tag-bg)}
+.detail-body{font-size:14px;color:var(--muted);line-height:1.9;white-space:pre-wrap}
+.detail-desc{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:1.2rem}
+
+/* CONTACT */
 .contact-links{display:flex;flex-direction:column;gap:10px;margin-top:1rem}
-.contact-link{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--bg);border:0.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:background .15s,border .15s;font-size:13.5px}
+.contact-link{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--bg);border:0.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:background .15s,border .15s}
 .contact-link:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
 .contact-link:hover .cl-icon svg{stroke:#fff}
 .cl-icon{width:34px;height:34px;background:var(--tag-bg);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s}
@@ -140,12 +118,14 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   nav{bottom:1.2rem;padding:.4rem .5rem;border-radius:18px}
   .nav-item{padding:6px 10px;border-radius:11px}
   .nav-label{font-size:9.5px}
+  .detail-photos.two{grid-template-columns:1fr}
+  .detail-photos.three{grid-template-columns:1fr}
+  .detail-photos.three img:first-child{grid-column:auto}
 }
 </style>
 </head>
 <body>
 
-<!-- ── FLOATING NAV ── -->
 <nav>
   <button class="nav-item active-link" onclick="goTo('home')" id="nav-home">
     <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
@@ -170,7 +150,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   </button>
 </nav>
 
-<!-- ── PAGE: HOME ── -->
+<!-- HOME -->
 <div class="page active" id="page-home">
   <section class="hero">
     <div class="avatar-wrap">
@@ -180,7 +160,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
     </div>
     <h1>Dhiki Teguh Prayogo</h1>
     <div class="role">Social Media Campaign Specialist · Jakarta, Indonesia</div>
-    <p>I'm a Social Media Campaign Specialist from Surabaya. I love crafting strategies that turn brand stories into measurable results — through social listening, sharp content, and data-driven campaigns.</p>
+    <p>I'm a Social Media Campaign Specialist from Jakarta. I love crafting strategies that turn brand stories into measurable results — through social listening, sharp content, and data-driven campaigns.</p>
     <div class="tags">
       <span class="tag">Brand24</span><span class="tag">Meta Ads</span><span class="tag">TikTok Ads</span>
       <span class="tag">Canva</span><span class="tag">Hootsuite</span><span class="tag">Google Analytics</span>
@@ -191,7 +171,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   <footer><p>© 2026 · Dhiki Teguh Prayogo · Jakarta, Indonesia</p></footer>
 </div>
 
-<!-- ── PAGE: ARCHIVE ── -->
+<!-- ARCHIVE -->
 <div class="page" id="page-archive">
   <div class="slabel">Trusted collaborations</div>
   <div class="ssub">Organizations and brands I've had the pleasure of working with.</div>
@@ -215,22 +195,20 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
       <span class="collab-name">Indonesians.id</span>
     </div>
   </div>
-
   <hr>
-
   <div class="slabel">My campaign process</div>
   <div class="ssub">A structured approach to designing and executing successful social media campaigns.</div>
   <div class="steps">
-    <div class="step"><span class="step-num">1</span><div><h3>Discovery</h3><p>I start by understanding your campaign goals, target audience, and business needs to craft a strategy that truly hits the mark.</p></div></div>
-    <div class="step"><span class="step-num">2</span><div><h3>Planning</h3><p>I design a detailed campaign plan — content creation, posting schedules, and budget allocation — to ensure everything runs smoothly.</p></div></div>
-    <div class="step"><span class="step-num">3</span><div><h3>Execution</h3><p>I run the campaign across multiple social platforms, manage paid ads, and ensure content reaches the right audience effectively.</p></div></div>
-    <div class="step"><span class="step-num">4</span><div><h3>Analysis & optimization</h3><p>I monitor performance in real-time, identify areas for improvement, and continuously optimize for better results.</p></div></div>
-    <div class="step"><span class="step-num">5</span><div><h3>Reporting</h3><p>I deliver comprehensive performance reports with clear ROI insights and actionable recommendations for future campaigns.</p></div></div>
+    <div class="step"><span class="step-num">1</span><div><h3>Discovery</h3><p>Understanding your campaign goals, target audience, and business needs to craft a strategy that hits the mark.</p></div></div>
+    <div class="step"><span class="step-num">2</span><div><h3>Planning</h3><p>Designing a detailed campaign plan — content creation, posting schedules, and budget allocation.</p></div></div>
+    <div class="step"><span class="step-num">3</span><div><h3>Execution</h3><p>Running campaigns across platforms, managing paid ads, and ensuring content reaches the right audience.</p></div></div>
+    <div class="step"><span class="step-num">4</span><div><h3>Analysis & optimization</h3><p>Monitoring performance in real-time and continuously optimizing for better results.</p></div></div>
+    <div class="step"><span class="step-num">5</span><div><h3>Reporting</h3><p>Delivering comprehensive reports with clear ROI insights and recommendations for future campaigns.</p></div></div>
   </div>
   <footer><p style="margin-top:2rem">© 2026 · Dhiki Teguh Prayogo</p></footer>
 </div>
 
-<!-- ── PAGE: WORK ── -->
+<!-- WORK -->
 <div class="page" id="page-work">
   <div class="slabel">Selected work</div>
   <div class="ssub">A few campaigns I've had the chance to work on.</div>
@@ -238,7 +216,17 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   <footer><p style="margin-top:2rem">© 2026 · Dhiki Teguh Prayogo</p></footer>
 </div>
 
-<!-- ── PAGE: CONTACT ── -->
+<!-- DETAIL -->
+<div class="page" id="page-detail">
+  <button class="detail-back" onclick="goTo('work')">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to Work
+  </button>
+  <div id="detail-content"></div>
+  <footer><p style="margin-top:2rem">© 2026 · Dhiki Teguh Prayogo</p></footer>
+</div>
+
+<!-- CONTACT -->
 <div class="page" id="page-contact">
   <div class="slabel">Let's connect</div>
   <div class="ssub">Have a project in mind or want to talk campaigns? Let's get in touch.</div>
@@ -268,38 +256,82 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
 </div>
 
 <script>
-const DEFAULT_PROJECTS=[
-  {id:1,title:"Brand Awareness Campaign",platform:"Polri · Instagram",desc:"Social media strategy to boost Polri's public engagement and institutional trust across platforms.",stat1:"Reach +200%",stat2:"Engagement +85%",icon:"📱",image:""},
-  {id:2,title:"Paid Ads Optimization",platform:"Gamatecha · Meta Ads",desc:"Restructured Meta Ads campaigns with audience segmentation and creative A/B testing for better ROAS.",stat1:"ROAS 4.2x",stat2:"CPC -38%",icon:"🎯",image:""},
-  {id:3,title:"Viral Content Series",platform:"Indonesians.id · TikTok",desc:"Developed a short-form content series targeting Gen Z with trending audio, hooks, and storytelling formats.",stat1:"1.2M views",stat2:"+14K followers",icon:"🔥",image:""},
-  {id:4,title:"Social Listening Report",platform:"Brand24 · Sentiment Analysis",desc:"Monitored brand mentions and competitor sentiment across platforms to inform campaign direction and tone.",stat1:"3 brands tracked",stat2:"Sentiment +62%",icon:"📊",image:""}
+const KEY='dhiki_projects';
+const DEFAULT=[
+  {id:1,title:"Brand Awareness Campaign",platform:"Polri · Instagram",desc:"Social media strategy to boost public engagement and institutional trust.",body:"Kampanye ini berfokus pada peningkatan brand awareness Polri di kalangan masyarakat luas melalui konten yang informatif dan engaging di Instagram.",stat1:"Reach +200%",stat2:"Engagement +85%",icon:"📱",img1:"",img2:"",img3:""},
+  {id:2,title:"Paid Ads Optimization",platform:"Gamatecha · Meta Ads",desc:"Restructured Meta Ads with audience segmentation and A/B testing.",body:"Optimasi kampanye iklan berbayar dengan pendekatan data-driven, termasuk audience segmentation, creative testing, dan budget allocation yang efisien.",stat1:"ROAS 4.2x",stat2:"CPC -38%",icon:"🎯",img1:"",img2:"",img3:""},
+  {id:3,title:"Viral Content Series",platform:"Indonesians.id · TikTok",desc:"Short-form content series targeting Gen Z audiences.",body:"Pengembangan seri konten TikTok yang viral dengan memanfaatkan trending audio, storytelling format, dan hook yang kuat di 3 detik pertama.",stat1:"1.2M views",stat2:"+14K followers",icon:"🔥",img1:"",img2:"",img3:""},
+  {id:4,title:"Social Listening Report",platform:"Brand24 · Sentiment Analysis",desc:"Monitored brand mentions and competitor sentiment analysis.",body:"Monitoring komprehensif brand mentions di berbagai platform menggunakan Brand24, menghasilkan laporan sentiment analysis yang actionable.",stat1:"3 brands tracked",stat2:"Sentiment +62%",icon:"📊",img1:"",img2:"",img3:""}
 ];
 
-function getProjects(){try{const d=localStorage.getItem('dhiki_projects');return d?JSON.parse(d):DEFAULT_PROJECTS}catch(e){return DEFAULT_PROJECTS}}
+function load(){
+  try{
+    const raw=localStorage.getItem(KEY);
+    if(!raw) return DEFAULT;
+    const parsed=JSON.parse(raw);
+    // Migrate old format (image field) to new (img1/img2/img3)
+    return parsed.map(p=>({
+      img1:p.img1||p.image||'', img2:p.img2||'', img3:p.img3||'',
+      icon:p.icon||'📌', ...p
+    }));
+  }catch(e){return DEFAULT}
+}
 
 function renderProjects(){
   const grid=document.getElementById('projects-grid');
-  const projects=getProjects();
-  if(!projects.length){grid.innerHTML='<p style="color:var(--muted);font-size:13px;grid-column:1/-1">No campaigns posted yet.</p>';return}
-  grid.innerHTML=projects.map(p=>`
-    <div class="pcard">
-      <div class="pthumb">${p.image?`<img src="${p.image}" alt="${p.title}" onerror="this.parentElement.innerHTML='${p.icon||'📌'}'">`:p.icon||'📌'}</div>
+  const projects=load();
+  if(!projects.length){
+    grid.innerHTML='<p style="color:var(--muted);font-size:13px;grid-column:1/-1">No campaigns yet.</p>';
+    return;
+  }
+  grid.innerHTML=projects.map(p=>{
+    const thumb=p.img1||(p.image||'');
+    return \`<div class="pcard">
+      <div class="pthumb">\${thumb?'<img src="'+thumb+'" alt="'+p.title+'" onerror="this.parentElement.innerHTML=''>':p.icon||'📌'}</div>
       <div class="pinfo">
-        <div class="pplatform">${p.platform||''}</div>
-        <h3>${p.title}</h3>
-        <p>${p.desc||''}</p>
-        <div class="pstats">${p.stat1?`<span>${p.stat1}</span>`:''}${p.stat2?`<span>${p.stat2}</span>`:''}</div>
+        <div class="pplatform">\${p.platform||''}</div>
+        <h3>\${p.title}</h3>
+        <p>\${p.desc||''}</p>
+        <div class="pstats">\${p.stat1?'<span>'+p.stat1+'</span>':''}\${p.stat2?'<span>'+p.stat2+'</span>':''}</div>
+        <button class="btn-detail" onclick="openDetail(\${p.id})">
+          View case <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
       </div>
-    </div>`).join('');
+    </div>\`;
+  }).join('');
+}
+
+function openDetail(id){
+  const p=load().find(x=>x.id===id);
+  if(!p) return;
+  const photos=[p.img1,p.img2,p.img3].filter(Boolean);
+  const photoClass=photos.length===1?'one':photos.length===2?'two':photos.length>=3?'three':'';
+  const photosHtml=photos.length
+    ?'<div class="detail-photos '+photoClass+'">'+photos.map(u=>'<img src="'+u+'" alt=""'+' onerror="this.style.display='none'">').join('')+ '</div>'
+    :'';
+  document.getElementById('detail-content').innerHTML=\`
+    <div class="detail-platform">\${p.platform||''}</div>
+    <div class="detail-title">\${p.title}</div>
+    <div class="detail-stats">
+      \${p.stat1?'<span>'+p.stat1+'</span>':''}
+      \${p.stat2?'<span>'+p.stat2+'</span>':''}
+    </div>
+    \${photosHtml}
+    <div class="detail-desc">\${p.desc||''}</div>
+    \${p.body?'<div class="detail-body">'+p.body+'</div>':''}
+  \`;
+  goTo('detail');
 }
 
 let current='home';
 function goTo(page){
   document.getElementById('page-'+current).classList.remove('active');
-  document.getElementById('nav-'+current).classList.remove('active-link');
+  const oldNav=document.getElementById('nav-'+current);
+  if(oldNav) oldNav.classList.remove('active-link');
   current=page;
   document.getElementById('page-'+page).classList.add('active');
-  document.getElementById('nav-'+page).classList.add('active-link');
+  const newNav=document.getElementById('nav-'+page);
+  if(newNav) newNav.classList.add('active-link');
   window.scrollTo({top:0,behavior:'smooth'});
   if(page==='work') renderProjects();
 }

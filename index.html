@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Dhiki Teguh Prayogo</title>
+<title>Dhiki Teguh Prayogo – Social Media Campaign Specialist</title>
+<meta name="description" content="Social Media Campaign Specialist from Jakarta. Expert in Brand24, Meta Ads, TikTok Ads, and data-driven campaigns."/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#ffffff;--bg2:#f7f6f3;--text:#1a1a1a;--muted:#888783;--border:rgba(0,0,0,0.09);--tag-bg:#f0efe9;--tag-text:#666}
@@ -13,21 +14,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg
 .page.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 nav{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);z-index:200;display:flex;align-items:center;justify-content:center;gap:.2rem;padding:.5rem .65rem;border-radius:22px;background:rgba(255,255,255,0.6);border:0.5px solid rgba(255,255,255,0.6);backdrop-filter:blur(30px) saturate(200%);-webkit-backdrop-filter:blur(30px) saturate(200%);box-shadow:0 8px 40px rgba(0,0,0,0.12),0 1px 0 rgba(255,255,255,0.9) inset}
-body.dark nav{background:rgba(22,22,20,0.68);border-color:rgba(255,255,255,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.55),0 1px 0 rgba(255,255,255,0.04) inset}
+body.dark nav{background:rgba(22,22,20,0.68);border-color:rgba(255,255,255,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.55)}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 14px;border-radius:14px;cursor:pointer;border:none;background:transparent;font-family:inherit;transition:background .15s}
-.nav-item:hover{background:rgba(0,0,0,0.05)}
-body.dark .nav-item:hover{background:rgba(255,255,255,0.07)}
-.nav-item.active-link{background:rgba(0,0,0,0.07)}
-body.dark .nav-item.active-link{background:rgba(255,255,255,0.1)}
+.nav-item:hover{background:rgba(0,0,0,0.06)}
+body.dark .nav-item:hover{background:rgba(255,255,255,0.08)}
+.nav-item.active-link{background:rgba(0,0,0,0.08)}
+body.dark .nav-item.active-link{background:rgba(255,255,255,0.11)}
 .nav-icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center}
 .nav-icon svg{width:18px;height:18px;stroke:var(--muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .15s}
-.nav-item.active-link .nav-icon svg{stroke:var(--text)}
+.nav-item.active-link .nav-icon svg,.nav-item.active-link .nav-label{stroke:var(--text);color:var(--text);font-weight:500}
 .nav-label{font-size:10px;color:var(--muted);letter-spacing:.01em;transition:color .15s}
-.nav-item.active-link .nav-label{color:var(--text);font-weight:500}
 .nav-divider{width:0.5px;height:28px;background:var(--border);margin:0 4px}
 .theme-toggle{padding:7px 10px;border-radius:14px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
-.theme-toggle:hover{background:rgba(0,0,0,0.05)}
-body.dark .theme-toggle:hover{background:rgba(255,255,255,0.07)}
+.theme-toggle:hover{background:rgba(0,0,0,0.06)}
+body.dark .theme-toggle:hover{background:rgba(255,255,255,0.08)}
 .theme-toggle svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .icon-sun{display:block}.icon-moon{display:none}
 body.dark .icon-sun{display:none}body.dark .icon-moon{display:block}
@@ -54,34 +54,34 @@ hr{border:none;border-top:0.5px solid var(--border);margin:2.4rem 0}
 .step h3{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px}
 .step p{font-size:12.5px;color:var(--muted);line-height:1.75}
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.pcard{background:var(--bg2);border-radius:14px;overflow:hidden;border:0.5px solid var(--border);transition:transform .2s;cursor:pointer;display:flex;flex-direction:column}
+.pcard{background:var(--bg2);border-radius:14px;overflow:hidden;border:0.5px solid var(--border);transition:transform .2s;display:flex;flex-direction:column}
 .pcard:hover{transform:translateY(-2px)}
-.pthumb{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:var(--tag-bg);overflow:hidden;font-size:1.6rem;flex-shrink:0}
+.pthumb{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:var(--tag-bg);overflow:hidden;font-size:1.8rem;flex-shrink:0}
 .pthumb img{width:100%;height:100%;object-fit:cover}
-.pinfo{padding:11px 12px;flex:1;display:flex;flex-direction:column}
+.pinfo{padding:12px 13px;flex:1;display:flex;flex-direction:column}
 .pplatform{font-size:10px;color:var(--muted);margin-bottom:3px;letter-spacing:.02em}
 .pinfo h3{font-size:12.5px;font-weight:500;color:var(--text);margin-bottom:4px}
 .pinfo p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:8px;flex:1}
-.pstats{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.pstats{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
 .pstats span{font-size:10px;background:var(--tag-bg);color:var(--tag-text);padding:2px 7px;border-radius:20px}
-.btn-detail{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;color:var(--text);background:var(--bg);border:0.5px solid var(--border);padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;transition:background .15s,color .15s}
+.btn-detail{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:500;color:var(--text);background:var(--bg);border:0.5px solid var(--border);padding:6px 12px;border-radius:20px;cursor:pointer;font-family:inherit;transition:background .15s,color .15s;align-self:flex-start}
 .btn-detail:hover{background:var(--text);color:var(--bg)}
 .btn-detail svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .detail-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer;background:none;border:none;font-family:inherit;margin-bottom:1.5rem;padding:0;transition:color .15s}
 .detail-back:hover{color:var(--text)}
 .detail-back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .detail-platform{font-size:12px;color:var(--muted);margin-bottom:.4rem;letter-spacing:.02em}
-.detail-title{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.4rem;line-height:1.3}
-.detail-stats{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:1.5rem}
+.detail-title{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.6rem;line-height:1.3}
+.detail-stats{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:1.4rem}
 .detail-stats span{font-size:12px;background:var(--tag-bg);color:var(--tag-text);padding:4px 12px;border-radius:20px}
-.detail-photos{display:grid;gap:8px;margin-bottom:1.5rem}
+.detail-photos{display:grid;gap:8px;margin-bottom:1.4rem}
 .detail-photos.one{grid-template-columns:1fr}
 .detail-photos.two{grid-template-columns:1fr 1fr}
 .detail-photos.three{grid-template-columns:1fr 1fr}
 .detail-photos.three img:first-child{grid-column:1/-1}
 .detail-photos img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:16/9;background:var(--tag-bg)}
-.detail-body{font-size:14px;color:var(--muted);line-height:1.9;white-space:pre-wrap;margin-top:1rem}
-.detail-desc{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:1.2rem}
+.detail-desc{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:1rem}
+.detail-body{font-size:14px;color:var(--muted);line-height:1.9;white-space:pre-wrap}
 .contact-links{display:flex;flex-direction:column;gap:10px;margin-top:1rem}
 .contact-link{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--bg);border:0.5px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:background .15s,border .15s}
 .contact-link:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
@@ -122,7 +122,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
     <span class="nav-label">Archive</span>
   </button>
   <button class="nav-item" id="nav-work" onclick="goTo('work')">
-    <span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></span>
+    <span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
     <span class="nav-label">Work</span>
   </button>
   <button class="nav-item" id="nav-contact" onclick="goTo('contact')">
@@ -136,6 +136,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   </button>
 </nav>
 
+<!-- HOME -->
 <div class="page active" id="page-home">
   <section class="hero">
     <div class="avatar-wrap">
@@ -156,6 +157,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   <footer><p>2026 &middot; Dhiki Teguh Prayogo &middot; Jakarta, Indonesia</p></footer>
 </div>
 
+<!-- ARCHIVE -->
 <div class="page" id="page-archive">
   <div class="slabel">Trusted collaborations</div>
   <div class="ssub">Organizations and brands I've had the pleasure of working with.</div>
@@ -187,11 +189,12 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
     <div class="step"><span class="step-num">2</span><div><h3>Planning</h3><p>Designing a detailed campaign plan — content creation, posting schedules, and budget allocation.</p></div></div>
     <div class="step"><span class="step-num">3</span><div><h3>Execution</h3><p>Running campaigns across platforms, managing paid ads, and ensuring content reaches the right audience.</p></div></div>
     <div class="step"><span class="step-num">4</span><div><h3>Analysis &amp; optimization</h3><p>Monitoring performance in real-time and continuously optimizing for better results.</p></div></div>
-    <div class="step"><span class="step-num">5</span><div><h3>Reporting</h3><p>Delivering comprehensive reports with clear ROI insights and recommendations for future campaigns.</p></div></div>
+    <div class="step"><span class="step-num">5</span><div><h3>Reporting</h3><p>Delivering comprehensive reports with clear ROI insights and actionable recommendations.</p></div></div>
   </div>
   <footer><p style="margin-top:2rem">2026 &middot; Dhiki Teguh Prayogo</p></footer>
 </div>
 
+<!-- WORK -->
 <div class="page" id="page-work">
   <div class="slabel">Selected work</div>
   <div class="ssub">A few campaigns I've had the chance to work on.</div>
@@ -199,6 +202,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   <footer><p style="margin-top:2rem">2026 &middot; Dhiki Teguh Prayogo</p></footer>
 </div>
 
+<!-- DETAIL -->
 <div class="page" id="page-detail">
   <button class="detail-back" onclick="goTo('work')">
     <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -208,6 +212,7 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
   <footer><p style="margin-top:2rem">2026 &middot; Dhiki Teguh Prayogo</p></footer>
 </div>
 
+<!-- CONTACT -->
 <div class="page" id="page-contact">
   <div class="slabel">Let's connect</div>
   <div class="ssub">Have a project in mind or want to talk campaigns? Let's get in touch.</div>
@@ -237,99 +242,94 @@ footer{margin-top:3rem;font-size:12px;color:var(--muted);padding-bottom:1rem}
 </div>
 
 <script>
-var KEY = 'dhiki_projects';
-var DEFAULT = [
-  {id:1, title:"Brand Awareness Campaign", platform:"Polri · Instagram", desc:"Social media strategy to boost public engagement and institutional trust.", body:"Kampanye ini berfokus pada peningkatan brand awareness Polri di kalangan masyarakat luas melalui konten informatif dan engaging di Instagram.", stat1:"Reach +200%", stat2:"Engagement +85%", icon:"📱", img1:"", img2:"", img3:""},
-  {id:2, title:"Paid Ads Optimization", platform:"Gamatecha · Meta Ads", desc:"Restructured Meta Ads with audience segmentation and A/B testing.", body:"Optimasi kampanye iklan berbayar dengan pendekatan data-driven, audience segmentation, creative testing, dan budget allocation yang efisien.", stat1:"ROAS 4.2x", stat2:"CPC -38%", icon:"🎯", img1:"", img2:"", img3:""},
-  {id:3, title:"Viral Content Series", platform:"Indonesians.id · TikTok", desc:"Short-form content series targeting Gen Z audiences.", body:"Pengembangan seri konten TikTok viral dengan trending audio, storytelling format, dan hook kuat di 3 detik pertama.", stat1:"1.2M views", stat2:"+14K followers", icon:"🔥", img1:"", img2:"", img3:""},
-  {id:4, title:"Social Listening Report", platform:"Brand24 · Sentiment Analysis", desc:"Monitored brand mentions and competitor sentiment analysis.", body:"Monitoring komprehensif brand mentions di berbagai platform menggunakan Brand24, menghasilkan laporan sentiment analysis yang actionable.", stat1:"3 brands tracked", stat2:"Sentiment +62%", icon:"📊", img1:"", img2:"", img3:""}
+var STORAGE_KEY = 'dhiki_v2_projects';
+
+var DEFAULT_DATA = [
+  {id:1,title:'Brand Awareness Campaign',platform:'Polri · Instagram',desc:'Social media strategy to boost public engagement and institutional trust.',body:'Kampanye ini berfokus pada peningkatan brand awareness Polri di kalangan masyarakat luas melalui konten informatif dan engaging di Instagram.',stat1:'Reach +200%',stat2:'Engagement +85%',icon:'📱',img1:'',img2:'',img3:''},
+  {id:2,title:'Paid Ads Optimization',platform:'Gamatecha · Meta Ads',desc:'Restructured Meta Ads with audience segmentation and A/B testing.',body:'Optimasi kampanye iklan berbayar dengan pendekatan data-driven, audience segmentation, creative testing, dan budget allocation yang efisien.',stat1:'ROAS 4.2x',stat2:'CPC -38%',icon:'🎯',img1:'',img2:'',img3:''},
+  {id:3,title:'Viral Content Series',platform:'Indonesians.id · TikTok',desc:'Short-form content series targeting Gen Z audiences.',body:'Pengembangan seri konten TikTok viral dengan trending audio, storytelling format, dan hook kuat di 3 detik pertama.',stat1:'1.2M views',stat2:'+14K followers',icon:'🔥',img1:'',img2:'',img3:''},
+  {id:4,title:'Social Listening Report',platform:'Brand24 · Sentiment Analysis',desc:'Monitored brand mentions and competitor sentiment analysis.',body:'Monitoring komprehensif brand mentions di berbagai platform menggunakan Brand24, menghasilkan laporan sentiment analysis yang actionable.',stat1:'3 brands tracked',stat2:'Sentiment +62%',icon:'📊',img1:'',img2:'',img3:''}
 ];
 
-function load() {
+function loadProjects() {
   try {
-    var raw = localStorage.getItem(KEY);
-    if (!raw) return DEFAULT;
-    var arr = JSON.parse(raw);
-    for (var i = 0; i < arr.length; i++) {
-      if (!arr[i].img1) arr[i].img1 = arr[i].image || '';
-      if (!arr[i].img2) arr[i].img2 = '';
-      if (!arr[i].img3) arr[i].img3 = '';
+    var raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      var arr = JSON.parse(raw);
+      if (arr && arr.length > 0) return arr;
     }
-    return arr;
-  } catch(e) { return DEFAULT; }
+  } catch(e) {}
+  return DEFAULT_DATA;
 }
 
 function renderProjects() {
   var grid = document.getElementById('projects-grid');
-  var projects = load();
-  if (!projects.length) {
+  var list = loadProjects();
+  if (!list.length) {
     grid.innerHTML = '<p style="color:var(--muted);font-size:13px;grid-column:1/-1">No campaigns yet.</p>';
     return;
   }
-  var html = '';
-  for (var i = 0; i < projects.length; i++) {
-    var p = projects[i];
-    var thumb = p.img1 || '';
-    var thumbHtml = thumb
-      ? '<img src="' + thumb + '" alt="' + p.title + '" onerror="this.style.display=\'none\'">'
+  var out = '';
+  for (var i = 0; i < list.length; i++) {
+    var p = list[i];
+    var cover = p.img1 || '';
+    var imgHtml = cover
+      ? '<img src="' + cover + '" alt="' + p.title + '" onerror="this.parentElement.innerHTML=\'' + (p.icon||'📌') + '\'">'
       : (p.icon || '📌');
-    var statsHtml = '';
-    if (p.stat1) statsHtml += '<span>' + p.stat1 + '</span>';
-    if (p.stat2) statsHtml += '<span>' + p.stat2 + '</span>';
-    html += '<div class="pcard">';
-    html += '<div class="pthumb">' + thumbHtml + '</div>';
-    html += '<div class="pinfo">';
-    html += '<div class="pplatform">' + (p.platform || '') + '</div>';
-    html += '<h3>' + p.title + '</h3>';
-    html += '<p>' + (p.desc || '') + '</p>';
-    html += '<div class="pstats">' + statsHtml + '</div>';
-    html += '<button class="btn-detail" onclick="openDetail(' + p.id + ')">View case <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>';
-    html += '</div></div>';
+    var st = '';
+    if (p.stat1) st += '<span>' + p.stat1 + '</span>';
+    if (p.stat2) st += '<span>' + p.stat2 + '</span>';
+    out += '<div class="pcard">';
+    out += '<div class="pthumb">' + imgHtml + '</div>';
+    out += '<div class="pinfo">';
+    out += '<div class="pplatform">' + (p.platform||'') + '</div>';
+    out += '<h3>' + (p.title||'') + '</h3>';
+    out += '<p>' + (p.desc||'') + '</p>';
+    out += '<div class="pstats">' + st + '</div>';
+    out += '<button class="btn-detail" onclick="showDetail(' + i + ')">View case <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>';
+    out += '</div></div>';
   }
-  grid.innerHTML = html;
+  grid.innerHTML = out;
 }
 
-function openDetail(id) {
-  var projects = load();
-  var p = null;
-  for (var i = 0; i < projects.length; i++) {
-    if (projects[i].id === id) { p = projects[i]; break; }
-  }
+function showDetail(idx) {
+  var list = loadProjects();
+  var p = list[idx];
   if (!p) return;
   var photos = [];
   if (p.img1) photos.push(p.img1);
   if (p.img2) photos.push(p.img2);
   if (p.img3) photos.push(p.img3);
-  var photoClass = photos.length === 1 ? 'one' : photos.length === 2 ? 'two' : 'three';
-  var photosHtml = '';
+  var cls = photos.length === 1 ? 'one' : photos.length === 2 ? 'two' : photos.length >= 3 ? 'three' : '';
+  var phtml = '';
   if (photos.length) {
-    photosHtml = '<div class="detail-photos ' + photoClass + '">';
+    phtml = '<div class="detail-photos ' + cls + '">';
     for (var j = 0; j < photos.length; j++) {
-      photosHtml += '<img src="' + photos[j] + '" alt="" onerror="this.style.display=\'none\'">';
+      phtml += '<img src="' + photos[j] + '" alt="" onerror="this.style.display=\'none\'">';
     }
-    photosHtml += '</div>';
+    phtml += '</div>';
   }
-  var html = '';
-  html += '<div class="detail-platform">' + (p.platform || '') + '</div>';
-  html += '<div class="detail-title">' + p.title + '</div>';
-  html += '<div class="detail-stats">' + (p.stat1 ? '<span>' + p.stat1 + '</span>' : '') + (p.stat2 ? '<span>' + p.stat2 + '</span>' : '') + '</div>';
-  html += photosHtml;
-  html += '<div class="detail-desc">' + (p.desc || '') + '</div>';
-  if (p.body) html += '<div class="detail-body">' + p.body + '</div>';
-  document.getElementById('detail-content').innerHTML = html;
+  var out = '';
+  out += '<div class="detail-platform">' + (p.platform||'') + '</div>';
+  out += '<div class="detail-title">' + (p.title||'') + '</div>';
+  out += '<div class="detail-stats">' + (p.stat1 ? '<span>'+p.stat1+'</span>' : '') + (p.stat2 ? '<span>'+p.stat2+'</span>' : '') + '</div>';
+  out += phtml;
+  out += '<div class="detail-desc">' + (p.desc||'') + '</div>';
+  if (p.body) out += '<div class="detail-body">' + p.body + '</div>';
+  document.getElementById('detail-content').innerHTML = out;
   goTo('detail');
 }
 
-var current = 'home';
+var currentPage = 'home';
 function goTo(page) {
-  document.getElementById('page-' + current).classList.remove('active');
-  var oldNav = document.getElementById('nav-' + current);
-  if (oldNav) oldNav.classList.remove('active-link');
-  current = page;
+  document.getElementById('page-' + currentPage).classList.remove('active');
+  var oldBtn = document.getElementById('nav-' + currentPage);
+  if (oldBtn) oldBtn.classList.remove('active-link');
+  currentPage = page;
   document.getElementById('page-' + page).classList.add('active');
-  var newNav = document.getElementById('nav-' + page);
-  if (newNav) newNav.classList.add('active-link');
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  var newBtn = document.getElementById('nav-' + page);
+  if (newBtn) newBtn.classList.add('active-link');
+  window.scrollTo({top:0, behavior:'smooth'});
   if (page === 'work') renderProjects();
 }
 

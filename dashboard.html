@@ -165,7 +165,6 @@ body.dark .dsun{display:none}body.dark .dmoon{display:block}
   </div>
   <div class="tabs">
     <button class="tab on" id="tw" onclick="switchTab('w')">Selected Work</button>
-    <button class="tab" id="tc" onclick="switchTab('c')">Certificates</button>
   </div>
   <div class="db">
     <div id="tw-con">
@@ -176,28 +175,6 @@ body.dark .dsun{display:none}body.dark .dmoon{display:block}
       </div>
       <div class="sech"><h2>Selected Work</h2><button class="btna" onclick="openW(null)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add campaign</button></div>
       <div class="pg" id="wg"></div>
-    </div>
-    <div id="tc-con" style="display:none">
-      <div class="cert-visibility">
-        <div class="cert-visibility-info">
-          <div class="cv-title">Show Certificates on Portfolio</div>
-          <div class="cv-desc">Toggle to show or hide the Certs tab on your portfolio</div>
-        </div>
-        <div class="toggle-wrap">
-          <span class="toggle-label" id="cert-vis-label">Visible</span>
-          <label class="toggle">
-            <input type="checkbox" id="cert-vis-toggle" checked onchange="toggleCertVisibility()">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      <div class="srow">
-        <div class="sb"><div class="sl">Total certificates</div><div class="sv" id="cn">0</div></div>
-        <div class="sb"><div class="sl">With images</div><div class="sv" id="cimg">0</div></div>
-        <div class="sb"><div class="sl">With links</div><div class="sv" id="clnk">0</div></div>
-      </div>
-      <div class="sech"><h2>Certificates</h2><button class="btna" onclick="openC(null)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add certificate</button></div>
-      <div class="cg" id="cg"></div>
     </div>
   </div>
 </div>
@@ -231,31 +208,11 @@ body.dark .dsun{display:none}body.dark .dmoon{display:block}
   </div>
 </div>
 
-<!-- MODAL CERT -->
-<div class="ov" id="ovc" onclick="if(event.target===this)closeC()">
-  <div class="mo">
-    <div class="mohd"></div>
-    <div class="moti" id="cmt">Add certificate</div>
-    <div class="fsec">Informasi Sertifikat</div>
-    <div class="fld"><label>Nama sertifikat *</label><input type="text" id="cn2" placeholder="e.g. Meta Certified Media Buying Professional"/></div>
-    <div class="fld"><label>Penerbit / Issuer</label><input type="text" id="cis" placeholder="e.g. Meta - 2024"/></div>
-    <div class="fld"><label>Keterangan (opsional)</label><textarea id="cde" rows="3" placeholder="Deskripsi singkat tentang sertifikat ini..."></textarea></div>
-    <div class="fsec">Link dan Gambar</div>
-    <div class="fld"><label>Link sertifikat (opsional)</label><input type="text" id="clk" placeholder="https://www.credly.com/badges/xxx"/></div>
-    <div class="fld"><label>Gambar sertifikat (opsional - Direct link dari imgbb.com)</label><input type="text" id="cim" placeholder="https://i.ibb.co/xxx/cert.jpg" oninput="pv('cv1',this.value)"/><img class="ipv" id="cv1"></div>
-    <div class="moft">
-      <button class="btnc" onclick="closeC()">Cancel</button>
-      <button class="btns" onclick="saveC()">Simpan sertifikat</button>
-    </div>
-  </div>
-</div>
-
 <div class="toast" id="toast"></div>
 
 <script>function hideEl(el){el.style.display='none';}
 
 var SK = "dhiki_work";
-var CK = "dhiki_cert";
 var PASS = "aLb4fr19PlYKfkcKrh&NsSi1S&Lx";
 var ei = null;
 var ct = "w";
@@ -270,8 +227,60 @@ var DW = [
     stat1: "76,000+ Members",
     stat2: "B2B Network",
     icon: "📱",
-    img1: "https://i.ibb.co/h1YZd4S8/member-group-dhiki.png",
-    img2: "https://i.ibb.co/HDPmswVD/Screenshot-2026-04-30-at-01-23-41.png",
+    img1: "https://i.imgur.com/CJdds7q.jpg",
+    img2: "https://i.imgur.com/nt4Sfqk.jpg",
+    img3: ""
+  },
+  {
+    id: 2,
+    title: "Facebook Regional Community Traffic Management & Engagement Campaign",
+    platform: "Facebook Community \u2013 E100 SS",
+    desc: "Managed and developed traffic from a regional Facebook community with over 64,000 members, mainly based in East Java. The community was developed as a targeted platform for campaign distribution, public discussion, community complaints, education, and regional audience engagement.",
+    body: "I managed and developed traffic from a Facebook community named E100 SS, a regional discussion and public complaint group with more than 64,000 members, predominantly located in East Java, Indonesia.\n\nThe community functions as a digital space for public discussion, community reports, local complaints, information sharing, and educational content. My role focused on maintaining audience engagement, supporting relevant discussions, and developing the group as a targeted traffic channel for regional campaigns.\n\nThrough this community, I was able to build a more focused and localized audience network, especially among people in East Java. The group also served as a strategic digital asset for distributing campaigns, understanding community issues, strengthening regional connections, and increasing public awareness through discussion-based and educational content.",
+    stat1: "64,000+ Members",
+    stat2: "East Java Region",
+    icon: "📣",
+    img1: "https://i.imgur.com/CJdds7q.jpg",
+    img2: "https://i.imgur.com/nt4Sfqk.jpg",
+    img3: ""
+  },
+  {
+    id: 2,
+    title: "Regional Community Traffic Management & Public Engagement Campaign",
+    platform: "Facebook Community – E100 SS",
+    desc: "Managed and developed traffic from a regional Facebook community with over 64,000 members, mainly based in East Java. The community was developed as a targeted platform for campaign distribution, public discussion, community complaints, education, and regional audience engagement.",
+    body: "I managed and developed traffic from a Facebook community named E100 SS, a regional discussion and public complaint group with more than 64,000 members, predominantly located in East Java, Indonesia.\n\nThe community functions as a digital space for public discussion, community reports, local complaints, information sharing, and educational content. My role focused on maintaining audience engagement, supporting relevant discussions, and developing the group as a targeted traffic channel for regional campaigns.\n\nThrough this community, I was able to build a more focused and localized audience network, especially among people in East Java. The group also served as a strategic digital asset for distributing campaigns, understanding community issues, strengthening regional connections, and increasing public awareness through discussion-based and educational content.",
+    stat1: "64,000+ Members",
+    stat2: "East Java",
+    icon: "📣",
+    img1: "",
+    img2: "",
+    img3: ""
+  },
+  {
+    id: 3,
+    title: "Digital Advocacy Campaign for Legal Fairness in the ZA Self-Defense Case",
+    platform: "Independent Digital Advocacy Campaign – Public Issue Amplification",
+    desc: "Coordinated a digital content amplification campaign related to a high-profile self-defense case involving a student in Malang, Indonesia. The campaign aimed to raise public awareness, increase national discussion, and support broader visibility of legal and social justice issues surrounding the case.",
+    body: "I coordinated with Zulham Akhmad Mubarrok to amplify public advocacy content related to the ZA case, a widely discussed legal case involving a high school student in Malang who faced serious legal charges after defending himself and his companion from a criminal attack.\n\nThe campaign focused on strengthening public awareness, increasing digital reach, and encouraging broader discussion about self-defense, proportional legal treatment, and public access to justice. Through strategic content distribution and issue amplification, the case gained wider public attention and became part of national conversation across digital platforms, media spaces, and public institutions.\n\nThis campaign was developed as a public advocacy and issue-amplification initiative related to the ZA case in Malang, Indonesia. The case became a national concern because it involved a student who was initially associated with serious criminal charges after an act of self-defense during a robbery-related incident.\n\nMy role was to coordinate digital content amplification, expanding the reach of the issue, and encouraging broader public discussion. The campaign was designed to bring attention to key legal and social concerns, including the concept of self-defense, the proportionality of legal charges, and the importance of fair treatment within the justice system.\n\nThe amplification strategy helped strengthen public attention toward the case and contributed to wider national visibility. The issue later received attention from public institutions and national media discussions, including coverage by Mata Najwa and public discussion involving the Indonesian House of Representatives / DPR.",
+    stat1: "National Media Coverage",
+    stat2: "DPR-level Concern",
+    icon: "⚖️",
+    img1: "",
+    img2: "",
+    img3: ""
+  },
+  {
+    id: 4,
+    title: "Telegram Meme Channel Growth & Audience Development Campaign",
+    platform: "Telegram Channels – memetelegram & Tolopedia",
+    desc: "Developed small-scale Telegram community projects focused on meme-based content and audience growth. The initiative successfully generated new traffic channels, with @memetelegram reaching 20,000+ members and Tolopedia reaching 12,000+ members.",
+    body: "I developed small-scale traffic growth projects on Telegram by creating and managing content-based community channels focused on memes and entertainment content.\n\nThe main objective was to test Telegram as an alternative traffic platform, build new audience assets, and evaluate the potential of meme-based content for community growth. Through consistent content distribution, audience engagement, and channel positioning, I grew two Telegram channels with significant member acquisition.\n\nThe first channel, @memetelegram, successfully attracted more than 20,000 members, while the second channel, Tolopedia, reached more than 12,000 members. These channels demonstrated my ability to build audiences across different social platforms beyond Facebook.\n\nMy responsibilities included channel development, content planning, audience growth strategy, publication consistency, and basic community positioning.",
+    stat1: "@memetelegram 20,000+",
+    stat2: "Tolopedia 12,000+",
+    icon: "\u2708\ufe0f",
+    img1: "",
+    img2: "",
     img3: ""
   }
 ];
@@ -280,39 +289,10 @@ function gW() {
   try { var r = localStorage.getItem(SK); if (r) { var a = JSON.parse(r); if (a && a.length) return a; } } catch(e) {}
   return JSON.parse(JSON.stringify(DW));
 }
-function gC() {
-  try { var r = localStorage.getItem(CK); if (r) { var a = JSON.parse(r); if (a && a.length) return a; } } catch(e) {}
-  return [];
-}
 function svW(a) {
   localStorage.setItem(SK, JSON.stringify(a));
   localStorage.setItem(SK + "_ts", String(Date.now()));
 }
-function svC(a) {
-  localStorage.setItem(CK, JSON.stringify(a));
-  localStorage.setItem(CK + "_ts", String(Date.now()));
-}
-
-var CERT_VIS_KEY = "dhiki_cert_visible";
-
-function toggleCertVisibility() {
-  var chk = document.getElementById("cert-vis-toggle");
-  var lbl = document.getElementById("cert-vis-label");
-  var visible = chk.checked;
-  localStorage.setItem(CERT_VIS_KEY, visible ? "1" : "0");
-  lbl.textContent = visible ? "Visible" : "Hidden";
-  showToast(visible ? "Certs tab ditampilkan di portfolio" : "Certs tab disembunyikan dari portfolio");
-}
-
-function initCertToggle() {
-  var stored = localStorage.getItem(CERT_VIS_KEY);
-  var visible = stored === null ? true : stored === "1";
-  var chk = document.getElementById("cert-vis-toggle");
-  var lbl = document.getElementById("cert-vis-label");
-  if (chk) chk.checked = visible;
-  if (lbl) lbl.textContent = visible ? "Visible" : "Hidden";
-}
-
 function doLogin() {
   var u = document.getElementById("iu").value.trim();
   var p = document.getElementById("ip").value;
@@ -321,7 +301,7 @@ function doLogin() {
     sessionStorage.setItem("ok", "1");
     document.getElementById("lp").style.display = "none";
     document.getElementById("dp").style.display = "block";
-    renderW(); renderC(); initCertToggle();
+    renderW();
   } else {
     e.style.display = "block";
     document.getElementById("ip").value = "";
@@ -366,29 +346,6 @@ function renderW() {
     o += "<div class='pcac'>";
     o += "<button class='ab abe' onclick='openW(" + i + ")'><svg viewBox='0 0 24 24'><path d='M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7'/><path d='M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z'/></svg> Edit</button>";
     o += "<button class='ab abd' onclick='delW(" + i + ")'><svg viewBox='0 0 24 24'><polyline points='3 6 5 6 21 6'/><path d='M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6'/><path d='M10 11v6M14 11v6'/></svg> Delete</button>";
-    o += "</div></div>";
-  }
-  g.innerHTML = o;
-}
-function renderC() {
-  var a = gC();
-  document.getElementById("cn").textContent = a.length;
-  document.getElementById("cimg").textContent = a.filter(function(x){ return x.img; }).length;
-  document.getElementById("clnk").textContent = a.filter(function(x){ return x.link; }).length;
-  var g = document.getElementById("cg");
-  if (!a.length) { g.innerHTML = "<div class='empty'>Belum ada sertifikat. Klik Add certificate untuk mulai.</div>"; return; }
-  var o = "";
-  for (var i = 0; i < a.length; i++) {
-    var ce = a[i];
-    var img = ce.img ? "<img src='" + ce.img + "' alt='cert' onerror='hideEl(this)'>" : "🏆";
-    o += "<div class='cc'><div class='ccim'>" + img + "</div>";
-    o += "<div class='ccb'><div class='ccis'>" + (ce.issuer||"") + "</div>";
-    o += "<div class='ccnm'>" + ce.name + "</div>";
-    if (ce.desc) o += "<div class='ccde'>" + ce.desc + "</div>";
-    o += "</div>";
-    o += "<div class='ccac'>";
-    o += "<button class='ab abe' onclick='openC(" + i + ")'><svg viewBox='0 0 24 24'><path d='M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7'/><path d='M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z'/></svg> Edit</button>";
-    o += "<button class='ab abd' onclick='delC(" + i + ")'><svg viewBox='0 0 24 24'><polyline points='3 6 5 6 21 6'/><path d='M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6'/><path d='M10 11v6M14 11v6'/></svg> Delete</button>";
     o += "</div></div>";
   }
   g.innerHTML = o;
@@ -458,50 +415,6 @@ function delW(i) {
   var a = gW(); a.splice(i, 1); svW(a); renderW(); toast("Campaign dihapus.");
 }
 
-function openC(i) {
-  ei = i;
-  document.getElementById("cmt").textContent = i !== null ? "Edit certificate" : "Add certificate";
-  if (i !== null) {
-    var c = gC()[i];
-    if (c) {
-      document.getElementById("cn2").value = c.name || "";
-      document.getElementById("cis").value = c.issuer || "";
-      document.getElementById("cde").value = c.desc || "";
-      document.getElementById("clk").value = c.link || "";
-      document.getElementById("cim").value = c.img || "";
-      pv("cv1", c.img||"");
-    }
-  } else {
-    ["cn2","cis","cde","clk","cim"].forEach(function(id) { document.getElementById(id).value = ""; });
-    document.getElementById("cv1").style.display = "none";
-  }
-  document.getElementById("ovc").classList.add("on");
-  setTimeout(function() { document.getElementById("cn2").focus(); }, 100);
-}
-function closeC() { document.getElementById("ovc").classList.remove("on"); ei = null; }
-
-function saveC() {
-  var n = document.getElementById("cn2").value.trim();
-  if (!n) { document.getElementById("cn2").focus(); toast("Nama sertifikat wajib diisi!"); return; }
-  var c = {
-    id: Date.now(),
-    name: n,
-    issuer: document.getElementById("cis").value.trim(),
-    desc: document.getElementById("cde").value.trim(),
-    link: document.getElementById("clk").value.trim(),
-    img: document.getElementById("cim").value.trim()
-  };
-  var a = gC();
-  if (ei !== null) { c.id = a[ei].id; a[ei] = c; } else { a.push(c); }
-  svC(a);
-  closeC(); renderC();
-  toast(ei !== null ? "Sertifikat diperbarui!" : "Sertifikat ditambahkan!");
-}
-
-function delC(i) {
-  if (!confirm("Hapus sertifikat ini?")) return;
-  var a = gC(); a.splice(i, 1); svC(a); renderC(); toast("Sertifikat dihapus.");
-}
 
 function toast(m) { var t = document.getElementById("toast"); t.textContent = m; t.classList.add("on"); setTimeout(function() { t.classList.remove("on"); }, 2600); }
 function toggleTheme() { document.body.classList.toggle("dark"); }
@@ -509,7 +422,7 @@ if (window.matchMedia("(prefers-color-scheme:dark)").matches) document.body.clas
 if (sessionStorage.getItem("ok") === "1") {
   document.getElementById("lp").style.display = "none";
   document.getElementById("dp").style.display = "block";
-  renderW(); renderC();
+  renderW();
 }
 </script>
 </body>

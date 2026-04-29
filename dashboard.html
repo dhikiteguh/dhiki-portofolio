@@ -42,6 +42,18 @@ body.dark .dsun{display:none}body.dark .dmoon{display:block}
 .tabs{display:flex;gap:4px;padding:1rem 1.25rem .5rem;max-width:920px;margin:0 auto}
 .tab{padding:7px 16px;border-radius:10px;font-size:12.5px;font-family:inherit;cursor:pointer;border:0.5px solid var(--bd);background:transparent;color:var(--mu);transition:all .15s}
 .tab.on{background:var(--ac);color:var(--bg);border-color:var(--ac)}
+.cert-visibility{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;background:var(--card);border:0.5px solid var(--bd);border-radius:14px;margin-bottom:1rem}
+.cert-visibility-info{display:flex;flex-direction:column;gap:2px}
+.cert-visibility-info .cv-title{font-size:13px;font-weight:500}
+.cert-visibility-info .cv-desc{font-size:11.5px;color:var(--mu)}
+.toggle-wrap{display:flex;align-items:center;gap:8px}
+.toggle-label{font-size:12px;color:var(--mu)}
+.toggle{position:relative;width:40px;height:22px;cursor:pointer}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle-slider{position:absolute;inset:0;background:var(--bd);border-radius:22px;transition:background .2s}
+.toggle-slider::before{content:'';position:absolute;height:16px;width:16px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
+.toggle input:checked + .toggle-slider{background:var(--ac)}
+.toggle input:checked + .toggle-slider::before{transform:translateX(18px)}
 .db{max-width:920px;margin:0 auto;padding:.75rem 1.25rem 5rem}
 .srow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.5rem}
 .sb{background:var(--card);border:0.5px solid var(--bd);border-radius:14px;padding:.9rem 1rem}
@@ -166,6 +178,19 @@ body.dark .dsun{display:none}body.dark .dmoon{display:block}
       <div class="pg" id="wg"></div>
     </div>
     <div id="tc-con" style="display:none">
+      <div class="cert-visibility">
+        <div class="cert-visibility-info">
+          <div class="cv-title">Show Certificates on Portfolio</div>
+          <div class="cv-desc">Toggle to show or hide the Certs tab on your portfolio</div>
+        </div>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="cert-vis-label">Visible</span>
+          <label class="toggle">
+            <input type="checkbox" id="cert-vis-toggle" checked onchange="toggleCertVisibility()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
       <div class="srow">
         <div class="sb"><div class="sl">Total certificates</div><div class="sv" id="cn">0</div></div>
         <div class="sb"><div class="sl">With images</div><div class="sv" id="cimg">0</div></div>
@@ -235,7 +260,21 @@ var PASS = "aLb4fr19PlYKfkcKrh&NsSi1S&Lx";
 var ei = null;
 var ct = "w";
 
-var DW = [];
+var DW = [
+  {
+    id: 1,
+    title: "Facebook Retail Community Traffic Management & Network Development Campaign",
+    platform: "Facebook Community - GRUP DISKUSI KONTER PULSA & PROMO",
+    desc: "Managed and developed a Facebook-based retail community with over 76,000 members across Indonesia, focusing on traffic growth, campaign distribution, B2B network development, and community engagement within the mobile credit and promotional retail sector.",
+    body: "I managed and developed a Facebook retail community named GRUP DISKUSI KONTER PULSA & PROMO, which has grown to more than 76,000 members across Indonesia. The group serves as a community platform for retail business owners, mobile credit sellers, counter operators, and promotional product distributors.\n\nMy role focused on building and maintaining an active digital community that supports campaign distribution, audience engagement, and traffic generation. Through community management, content moderation, discussion facilitation, and member engagement strategies, the group became a valuable channel for reaching a targeted retail audience.\n\nThe community was also developed as part of my broader digital asset strategy to support B2B network expansion, campaign visibility, and traffic acquisition. It functions as a representative digital platform that helps connect retail actors, strengthen business relationships, and create opportunities for promotional activities within the Indonesian retail and counter business ecosystem.",
+    stat1: "76,000+ Members",
+    stat2: "B2B Network",
+    icon: "📱",
+    img1: "https://i.ibb.co/h1YZd4S8/member-group-dhiki.png",
+    img2: "https://i.ibb.co/HDPmswVD/Screenshot-2026-04-30-at-01-23-41.png",
+    img3: ""
+  }
+];
 
 function gW() {
   try { var r = localStorage.getItem(SK); if (r) { var a = JSON.parse(r); if (a && a.length) return a; } } catch(e) {}
@@ -254,6 +293,26 @@ function svC(a) {
   localStorage.setItem(CK + "_ts", String(Date.now()));
 }
 
+var CERT_VIS_KEY = "dhiki_cert_visible";
+
+function toggleCertVisibility() {
+  var chk = document.getElementById("cert-vis-toggle");
+  var lbl = document.getElementById("cert-vis-label");
+  var visible = chk.checked;
+  localStorage.setItem(CERT_VIS_KEY, visible ? "1" : "0");
+  lbl.textContent = visible ? "Visible" : "Hidden";
+  showToast(visible ? "Certs tab ditampilkan di portfolio" : "Certs tab disembunyikan dari portfolio");
+}
+
+function initCertToggle() {
+  var stored = localStorage.getItem(CERT_VIS_KEY);
+  var visible = stored === null ? true : stored === "1";
+  var chk = document.getElementById("cert-vis-toggle");
+  var lbl = document.getElementById("cert-vis-label");
+  if (chk) chk.checked = visible;
+  if (lbl) lbl.textContent = visible ? "Visible" : "Hidden";
+}
+
 function doLogin() {
   var u = document.getElementById("iu").value.trim();
   var p = document.getElementById("ip").value;
@@ -262,7 +321,7 @@ function doLogin() {
     sessionStorage.setItem("ok", "1");
     document.getElementById("lp").style.display = "none";
     document.getElementById("dp").style.display = "block";
-    renderW(); renderC();
+    renderW(); renderC(); initCertToggle();
   } else {
     e.style.display = "block";
     document.getElementById("ip").value = "";
